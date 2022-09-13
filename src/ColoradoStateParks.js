@@ -1,8 +1,18 @@
 import React from "react";
 import howManyParks from "./parks/howManyParks";
+import MesaVerde from "./parks/MesaVerde";
+import * as RMFunctions from "./parks/RockyMountain";
 
 function ColoradoStateParks() {
   howManyParks(); // => "42 parks!"
 
-  return <h1>Colorado State Parks!</h1>;
+  return (
+    <div>
+      <h1>Colorado State Parks!</h1>
+      <MesaVerde />
+      <h2>{RMFunctions.trees}</h2>
+    </div>
+  );
 }
+
+export default ColoradoStateParks;
